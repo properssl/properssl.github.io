@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Proper SSL by properssl</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/properssl">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Proper SSL</h1>
+            <h2>SSL ... Done right!</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <div id="no-downloads">
+        <span class="inner">
+        </span>
+      </div>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a name="proper-ssl" class="anchor" href="#proper-ssl"><span class="octicon octicon-link"></span></a>Proper SSL</h1>
+
+<p>Proper SSL is a repository of examples of how to properly setup SSL connections as both a client and server.</p>
+
+<h3>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h3>
+
+<p>The idea for Proper SSL came about when looking for good examples for setting up SSL on nginx (specifically how to set it up for PFS using ECDHE). The idea was then expanded to include other client/server setups which should be correctly using SSL such as database clients and servers.</p>
+
+<h3>
+<a name="format" class="anchor" href="#format"><span class="octicon octicon-link"></span></a>Format</h3>
+
+<p>Each repository contains a specific self-contained example of how to properly setup and use an SSL connection. The objective isn't to create the most extensible SSL examples, it's simply to have a cheat sheet to look at for the right way of doing things. Whenever possible external dependencies should be minimized.</p>
+
+<p>Each example should preferably be runnable. Given the client/server nature of most of these examples the preferred approach is to define the test server using Vagrant so that new users can try things out with a simple <code>vagrant up</code>.</p>
+
+<p>Any additional steps needed to run the example should be in the example's <code>README</code> file.</p>
+
+<h3>
+<a name="repo-naming-conventions---clients-connecting-to-servers" class="anchor" href="#repo-naming-conventions---clients-connecting-to-servers"><span class="octicon octicon-link"></span></a>Repo Naming Conventions - Clients Connecting To Servers</h3>
+
+<p>Examples of clients securely connecting to servers should be named in the following format:</p>
+
+<pre><code>[language]-[interface/framework]-[target]
+</code></pre>
+
+<ul>
+<li>
+<code>language</code> is the programming language used (eg java, ruby, python).</li>
+<li>
+<code>interface/framework</code> is the framework used (eg jdbc, sqlalchemy, datamapper, dbi).</li>
+<li>
+<code>target</code> is the target that is being connected to. This will usually be an external server (eg postgresql, mysql)</li>
+</ul><p>Unless there's a good reason for it don't add "ssl" to the name of the repo.</p>
+
+<h3>
+<a name="repo-naming-conventions---server-configurations" class="anchor" href="#repo-naming-conventions---server-configurations"><span class="octicon octicon-link"></span></a>Repo Naming Conventions - Server Configurations</h3>
+
+<p>Examples of server configurations should be named in the following format:</p>
+
+<pre><code>[server-name]-[description]
+</code></pre>
+
+<ul>
+<li>
+<code>server-name</code> is the name of the server program (eg nginx, apache2, mysql)</li>
+<li>
+<code>description</code> is a short description about what's being configured (eg pfs-ecdhe)</li>
+</ul><h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>Unless explicitly specified otherwise, all Proper SSL code is release under the MIT License.</p>
+
+<h3>
+<a name="who-created-this" class="anchor" href="#who-created-this"><span class="octicon octicon-link"></span></a>Who Created This?</h3>
+
+<p>Proper SSL is brought to you by the creators of <a href="http://www.jackdb.com/home.html?utm_source=properssl">JackDB</a>.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>Projects by <a href="https://github.com/properssl">properssl</a> can be found on <a href="https://github.com/properssl">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-42106876-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
