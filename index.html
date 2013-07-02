@@ -28,7 +28,7 @@
         <span class="ribbon-outer">
           <span class="ribbon-inner">
             <h1>Proper SSL</h1>
-            <h2>SSL ... Done right!</h2>
+            <h2>SSL Best Practices</h2>
           </span>
           <span class="left-tail"></span>
           <span class="right-tail"></span>
@@ -48,24 +48,24 @@
         <h1>
 <a name="proper-ssl" class="anchor" href="#proper-ssl"><span class="octicon octicon-link"></span></a>Proper SSL</h1>
 
-<p>Proper SSL is a repository of examples of how to properly setup SSL connections as both a client and server.</p>
+<p>Proper SSL is a series of best practices for establishing SSL connections between clients and servers.</p>
 
 <h3>
 <a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h3>
 
-<p>The idea for Proper SSL came about when looking for good examples for setting up SSL on nginx (specifically how to set it up for PFS using ECDHE). The idea was then expanded to include other client/server setups which should be correctly using SSL such as database clients and servers.</p>
+<p>Examples of using SSL found across the web are frequently incomplete or insecure. Proper SSL aims to make it easier to follow best practices by providing a series of complete example configurations for establishing SSL connections in the most popular client/server environments.</p>
 
 <h3>
 <a name="format" class="anchor" href="#format"><span class="octicon octicon-link"></span></a>Format</h3>
 
-<p>Each repository contains a specific self-contained example of how to properly setup and use an SSL connection. The objective isn't to create the most extensible SSL examples, it's simply to have a cheat sheet to look at for the right way of doing things. Whenever possible external dependencies should be minimized.</p>
+<p>Each repository contains a self-contained example of how to properly establish and use an SSL connection. The objective isn't to create the most extensible SSL examples but to have a cheat sheet of the right way to do things. Whenever possible, external dependencies should be minimized.</p>
 
-<p>Each example should preferably be runnable. Given the client/server nature of most of these examples the preferred approach is to define the test server using Vagrant so that new users can try things out with a simple <code>vagrant up</code>.</p>
+<p>Each example is runnable. Given their client/server nature, the preferred way is to define a test server using <a href="http://www.vagrantup.com/">Vagrant</a> so that new users can run tests with a simple <code>vagrant up</code> command.</p>
 
-<p>Any additional steps needed to run the example should be in the example's <code>README</code> file.</p>
+<p>Any additional steps needed to run an example should be in its <code>README</code> file.</p>
 
 <h3>
-<a name="repo-naming-conventions---clients-connecting-to-servers" class="anchor" href="#repo-naming-conventions---clients-connecting-to-servers"><span class="octicon octicon-link"></span></a>Repo Naming Conventions - Clients Connecting To Servers</h3>
+<a name="repo-naming-conventions---clients" class="anchor" href="#repo-naming-conventions---clients"><span class="octicon octicon-link"></span></a>Repo Naming Conventions - Clients</h3>
 
 <p>Examples of clients securely connecting to servers should be named in the following format:</p>
 
@@ -74,15 +74,15 @@
 
 <ul>
 <li>
-<code>language</code> is the programming language used (eg java, ruby, python).</li>
+<code>language</code> is the programming language used (eg. java, ruby, python).</li>
 <li>
-<code>interface/framework</code> is the framework used (eg jdbc, sqlalchemy, datamapper, dbi).</li>
+<code>interface/framework</code> is the framework used (eg. jdbc, sqlalchemy, datamapper, dbi).</li>
 <li>
-<code>target</code> is the target that is being connected to. This will usually be an external server (eg postgresql, mysql)</li>
-</ul><p>Unless there's a good reason for it don't add "ssl" to the name of the repo.</p>
+<code>target</code> is the server being connected to. This will usually be an external server (eg. postgresql, mysql).</li>
+</ul><p>Unless there's a good reason, don't add "ssl" to the name of the repo.</p>
 
 <h3>
-<a name="repo-naming-conventions---server-configurations" class="anchor" href="#repo-naming-conventions---server-configurations"><span class="octicon octicon-link"></span></a>Repo Naming Conventions - Server Configurations</h3>
+<a name="repo-naming-conventions---servers" class="anchor" href="#repo-naming-conventions---servers"><span class="octicon octicon-link"></span></a>Repo Naming Conventions - Servers</h3>
 
 <p>Examples of server configurations should be named in the following format:</p>
 
@@ -91,27 +91,25 @@
 
 <ul>
 <li>
-<code>server-name</code> is the name of the server program (eg nginx, apache2, mysql)</li>
+<code>server-name</code> is the name of the server used (eg. nginx, apache2, mysql).</li>
 <li>
-<code>description</code> is a short description about what's being configured (eg pfs-ecdhe)</li>
+<code>description</code> is a short description about what's being configured (eg. pfs).</li>
 </ul><h3>
 <a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h3>
 
-<p>Here are links to a couple of the examples:</p>
-
 <ul>
-<li><a href="https://github.com/properssl/nginx-pfs">https://github.com/properssl/nginx-pfs</a></li>
-<li><a href="https://github.com/properssl/java-jdbc-postgresql">https://github.com/properssl/java-jdbc-postgresql</a></li>
-<li><a href="https://github.com/properssl/java-jdbc-mariadb">https://github.com/properssl/java-jdbc-mariadb</a></li>
+<li><a href="https://github.com/properssl/nginx-pfs">nginx with Perfect Forward Security</a></li>
+<li><a href="https://github.com/properssl/java-jdbc-postgresql">PostgreSQL JDBC with self-signed certificate validation</a></li>
+<li><a href="https://github.com/properssl/java-jdbc-mariadb">MariaDB JDBC with self-signed certificate validation</a></li>
 </ul><h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
-<p>Unless explicitly specified otherwise, all Proper SSL code is release under the MIT License.</p>
+<p>Unless explicitly specified otherwise, all Proper SSL code is released under the <a href="LICENSE">MIT License</a>.</p>
 
 <h3>
-<a name="who-created-this" class="anchor" href="#who-created-this"><span class="octicon octicon-link"></span></a>Who Created This?</h3>
+<a name="who-created-proper-ssl" class="anchor" href="#who-created-proper-ssl"><span class="octicon octicon-link"></span></a>Who Created Proper SSL?</h3>
 
-<p>Proper SSL is brought to you by the creators of <a href="http://www.jackdb.com/home.html?utm_source=properssl">JackDB</a>.</p>
+<p>Proper SSL is brought to you by <a href="http://www.jackdb.com/home.html?utm_source=properssl">JackDB</a>.</p>
       </section>
 
       <footer>
